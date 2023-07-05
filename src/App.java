@@ -1,64 +1,89 @@
-import javax.swing.event.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.plaf.ColorUIResource;
 
-public class App extends JFrame implements ActionListener {
+/**
+ * @author Lucero Emmanuel
+ */ 
+
+public class App extends JFrame implements ActionListener {// clase principal
+    //elementos gráficos
     private JLabel labelR, labelG, labelB, labelC, labelM, labelY, labelK, labelTitulo001, labelTitulo002;
     private JComboBox boxR, boxG, boxB, boxC, boxM, boxY, boxK;
     private JButton buttonRGB, buttonCMYK, buttonLimpiar, buttonDesarrollador;
     private JPanel panelRGB, panelCMYK;
+    //apoyo para los elementos gráficos
+    private final Color colorGeneral = new Color(255, 255, 255);
+    private final Color colorBotones = new Color(240, 240, 240);
+    private final Font fuenteTitulo = new Font("Century Gothic", 0, 16);
+    private final Font fuenteGeneral = new Font("Century Gothic", 0, 12);
+    //elementos para las fórmulas
     private float r, g, b, c, m, y, k, apoyo;
     private int rojo, verde, azul;
 
     public App() {// constructor
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(255, 255, 255));
+        getContentPane().setBackground(colorGeneral);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         labelTitulo001 = new JLabel("CONVERSOR");// ----------------------------------------------labels
-        labelTitulo001.setFont(new Font("Century Gothic", 0, 16));
+        labelTitulo001.setFont(fuenteTitulo);
         labelTitulo001.setBounds(95, 0, 150, 30);
         add(labelTitulo001);
 
         labelTitulo002 = new JLabel("De Modelos De Colores");
         labelTitulo002.setBounds(58, 20, 300, 30);
-        labelTitulo002.setFont(new Font("Century Gothic", 0, 16));
+        labelTitulo002.setFont(fuenteTitulo);
         add(labelTitulo002);
 
         labelR = new JLabel("Rojo");// ------------------------------------------------------------
-        labelR.setFont(new Font("Century Gothic", 0, 12));
+        labelR.setFont(fuenteGeneral);
         labelR.setBounds(10, 70, 100, 30);
         add(labelR);
 
         labelG = new JLabel("Verde");
-        labelG.setFont(new Font("Century Gothic", 0, 12));
+        labelG.setFont(fuenteGeneral);
         labelG.setBounds(10, 100, 100, 30);
         add(labelG);
 
         labelB = new JLabel("Azul");
-        labelB.setFont(new Font("Century Gothic", 0, 12));
+        labelB.setFont(fuenteGeneral);
         labelB.setBounds(10, 130, 100, 30);
         add(labelB);
 
         labelC = new JLabel("Cian");
-        labelC.setFont(new Font("Century Gothic", 0, 12));
+        labelC.setFont(fuenteGeneral);
         labelC.setBounds(10, 190, 100, 30);
         add(labelC);
 
         labelM = new JLabel("Magenta");
-        labelM.setFont(new Font("Century Gothic", 0, 12));
+        labelM.setFont(fuenteGeneral);
         labelM.setBounds(10, 220, 100, 30);
         add(labelM);
 
         labelY = new JLabel("Amarillo");
-        labelY.setFont(new Font("Century Gothic", 0, 12));
+        labelY.setFont(fuenteGeneral);
         labelY.setBounds(10, 250, 100, 30);
         add(labelY);
 
         labelK = new JLabel("Negro");
-        labelK.setFont(new Font("Century Gothic", 0, 12));
+        labelK.setFont(fuenteGeneral);
         labelK.setBounds(10, 280, 100, 30);
         add(labelK);
 
@@ -67,8 +92,8 @@ public class App extends JFrame implements ActionListener {
             boxR.addItem(e);
         }
         boxR.setBounds(80, 70, 50, 20);
-        boxR.setBackground(new Color(255, 255, 255));
-        boxR.setFont(new Font("Century Gothic", 0, 12));
+        boxR.setBackground(colorGeneral);
+        boxR.setFont(fuenteGeneral);
         add(boxR);
 
         boxG = new JComboBox();
@@ -76,8 +101,8 @@ public class App extends JFrame implements ActionListener {
             boxG.addItem(e);
         }
         boxG.setBounds(80, 100, 50, 20);
-        boxG.setBackground(new Color(255, 255, 255));
-        boxG.setFont(new Font("Century Gothic", 0, 12));
+        boxG.setBackground(colorGeneral);
+        boxG.setFont(fuenteGeneral);
         add(boxG);
 
         boxB = new JComboBox();
@@ -85,8 +110,8 @@ public class App extends JFrame implements ActionListener {
             boxB.addItem(e);
         }
         boxB.setBounds(80, 130, 50, 20);
-        boxB.setBackground(new Color(255, 255, 255));
-        boxB.setFont(new Font("Century Gothic", 0, 12));
+        boxB.setBackground(colorGeneral);
+        boxB.setFont(fuenteGeneral);
         add(boxB);
 
         boxC = new JComboBox();
@@ -94,8 +119,8 @@ public class App extends JFrame implements ActionListener {
             boxC.addItem(e);
         }
         boxC.setBounds(80, 190, 50, 20);
-        boxC.setBackground(new Color(255, 255, 255));
-        boxC.setFont(new Font("Century Gothic", 0, 12));
+        boxC.setBackground(colorGeneral);
+        boxC.setFont(fuenteGeneral);
         add(boxC);
 
         boxM = new JComboBox();
@@ -103,8 +128,8 @@ public class App extends JFrame implements ActionListener {
             boxM.addItem(e);
         }
         boxM.setBounds(80, 220, 50, 20);
-        boxM.setBackground(new Color(255, 255, 255));
-        boxM.setFont(new Font("Century Gothic", 0, 12));
+        boxM.setBackground(colorGeneral);
+        boxM.setFont(fuenteGeneral);
         add(boxM);
 
         boxY = new JComboBox();
@@ -112,8 +137,8 @@ public class App extends JFrame implements ActionListener {
             boxY.addItem(e);
         }
         boxY.setBounds(80, 250, 50, 20);
-        boxY.setBackground(new Color(255, 255, 255));
-        boxY.setFont(new Font("Century Gothic", 0, 12));
+        boxY.setBackground(colorGeneral);
+        boxY.setFont(fuenteGeneral);
         add(boxY);
 
         boxK = new JComboBox();
@@ -121,45 +146,45 @@ public class App extends JFrame implements ActionListener {
             boxK.addItem(e);
         }
         boxK.setBounds(80, 280, 50, 20);
-        boxK.setBackground(new Color(255, 255, 255));
-        boxK.setFont(new Font("Century Gothic", 0, 12));
+        boxK.setBackground(colorGeneral);
+        boxK.setFont(fuenteGeneral);
         add(boxK);
 
         buttonRGB = new JButton("RGB a CMYK");// --------------------------------------botones
         buttonRGB.setBounds(170, 70, 120, 20);
-        buttonRGB.setBackground(new Color(240, 240, 240));
-        buttonRGB.setFont(new Font("Century Gothic", 0, 12));
+        buttonRGB.setBackground(colorBotones);
+        buttonRGB.setFont(fuenteGeneral);
         buttonRGB.addActionListener(this);
         add(buttonRGB);
 
         panelRGB = new JPanel();/////////////////////////////////////////////////////////////////////////////
         panelRGB.setBounds(170, 90, 120, 5);
-        panelRGB.setBackground(new Color(255, 255, 255));
+        panelRGB.setBackground(colorGeneral);
         add(panelRGB);
 
         buttonCMYK = new JButton("CMYK a RGB");
         buttonCMYK.setBounds(170, 190, 120, 20);
-        buttonCMYK.setBackground(new Color(240, 240, 240));
-        buttonCMYK.setFont(new Font("Century Gothic", 0, 12));
+        buttonCMYK.setBackground(colorBotones);
+        buttonCMYK.setFont(fuenteGeneral);
         buttonCMYK.addActionListener(this);
         add(buttonCMYK);
 
         panelCMYK = new JPanel();/////////////////////////////////////////////////////////////////////////////
         panelCMYK.setBounds(170, 210, 120, 5);
-        panelCMYK.setBackground(new Color(255, 255, 255));
+        panelCMYK.setBackground(colorGeneral);
         add(panelCMYK);
 
         buttonLimpiar = new JButton("Limpiar");
         buttonLimpiar.setBounds(170, 330, 120, 20);
-        buttonLimpiar.setBackground(new Color(240, 240, 240));
-        buttonLimpiar.setFont(new Font("Century Gothic", 0, 12));
+        buttonLimpiar.setBackground(colorBotones);
+        buttonLimpiar.setFont(fuenteGeneral);
         buttonLimpiar.addActionListener(this);
         add(buttonLimpiar);
 
         buttonDesarrollador = new JButton("Desarrollador");
         buttonDesarrollador.setBounds(10, 330, 120, 20);
-        buttonDesarrollador.setBackground(new Color(240, 240, 240));
-        buttonDesarrollador.setFont(new Font("Century Gothic", 0, 12));
+        buttonDesarrollador.setBackground(colorBotones);
+        buttonDesarrollador.setFont(fuenteGeneral);
         buttonDesarrollador.addActionListener(this);
         add(buttonDesarrollador);
     }// constructor
@@ -231,8 +256,8 @@ public class App extends JFrame implements ActionListener {
             boxK.setSelectedIndex(0);
             buttonRGB.setEnabled(true);
             buttonCMYK.setEnabled(true);
-            panelRGB.setBackground(new Color(255, 255, 255));
-            panelCMYK.setBackground(new Color(255, 255, 255));
+            panelRGB.setBackground(colorGeneral);
+            panelCMYK.setBackground(colorGeneral);
         } // botón limpiar
 
         if (e.getSource() == buttonDesarrollador) {
