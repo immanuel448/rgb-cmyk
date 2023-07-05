@@ -23,25 +23,22 @@ public class App extends JFrame implements ActionListener {// clase principal
     private float r, g, b, c, m, y, k, apoyo;
     private int rojo, verde, azul;
 
-    public App() {// constructor
+    // constructor
+    public App() {
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setBackground(colorGeneral);
+        //cambios generales al "programa" 
+        UIManager.getLookAndFeelDefaults().put("Panel.background", colorGeneral);
+        UIManager.getLookAndFeelDefaults().put("ComboBox.disabledForeground", new Color(75, 75, 75));
+        UIManager.getLookAndFeelDefaults().put("ComboBox.background", colorGeneral);
+        UIManager.getLookAndFeelDefaults().put("ComboBox.font", fuenteGeneral);
+        UIManager.getLookAndFeelDefaults().put("Button.background", colorBotones);
+        UIManager.getLookAndFeelDefaults().put("Button.font", fuenteGeneral); 
+        UIManager.getLookAndFeelDefaults().put("Label.font", fuenteGeneral); 
+        UIManager.getLookAndFeelDefaults().put("OptionPane.background", colorGeneral);
+        UIManager.getLookAndFeelDefaults().put("OptionPane.messageFont", fuenteGeneral);  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         labelTitulo001 = new JLabel("CONVERSOR");// ----------------------------------------------labels
         labelTitulo001.setFont(fuenteTitulo);
         labelTitulo001.setBounds(95, 0, 150, 30);
@@ -53,37 +50,30 @@ public class App extends JFrame implements ActionListener {// clase principal
         add(labelTitulo002);
 
         labelR = new JLabel("Rojo");// ------------------------------------------------------------
-        labelR.setFont(fuenteGeneral);
         labelR.setBounds(10, 70, 100, 30);
         add(labelR);
 
         labelG = new JLabel("Verde");
-        labelG.setFont(fuenteGeneral);
         labelG.setBounds(10, 100, 100, 30);
         add(labelG);
 
         labelB = new JLabel("Azul");
-        labelB.setFont(fuenteGeneral);
         labelB.setBounds(10, 130, 100, 30);
         add(labelB);
 
         labelC = new JLabel("Cian");
-        labelC.setFont(fuenteGeneral);
         labelC.setBounds(10, 190, 100, 30);
         add(labelC);
 
         labelM = new JLabel("Magenta");
-        labelM.setFont(fuenteGeneral);
         labelM.setBounds(10, 220, 100, 30);
         add(labelM);
 
         labelY = new JLabel("Amarillo");
-        labelY.setFont(fuenteGeneral);
         labelY.setBounds(10, 250, 100, 30);
         add(labelY);
 
         labelK = new JLabel("Negro");
-        labelK.setFont(fuenteGeneral);
         labelK.setBounds(10, 280, 100, 30);
         add(labelK);
 
@@ -92,8 +82,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxR.addItem(e);
         }
         boxR.setBounds(80, 70, 50, 20);
-        boxR.setBackground(colorGeneral);
-        boxR.setFont(fuenteGeneral);
         add(boxR);
 
         boxG = new JComboBox();
@@ -101,8 +89,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxG.addItem(e);
         }
         boxG.setBounds(80, 100, 50, 20);
-        boxG.setBackground(colorGeneral);
-        boxG.setFont(fuenteGeneral);
         add(boxG);
 
         boxB = new JComboBox();
@@ -110,8 +96,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxB.addItem(e);
         }
         boxB.setBounds(80, 130, 50, 20);
-        boxB.setBackground(colorGeneral);
-        boxB.setFont(fuenteGeneral);
         add(boxB);
 
         boxC = new JComboBox();
@@ -119,8 +103,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxC.addItem(e);
         }
         boxC.setBounds(80, 190, 50, 20);
-        boxC.setBackground(colorGeneral);
-        boxC.setFont(fuenteGeneral);
         add(boxC);
 
         boxM = new JComboBox();
@@ -128,8 +110,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxM.addItem(e);
         }
         boxM.setBounds(80, 220, 50, 20);
-        boxM.setBackground(colorGeneral);
-        boxM.setFont(fuenteGeneral);
         add(boxM);
 
         boxY = new JComboBox();
@@ -137,8 +117,6 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxY.addItem(e);
         }
         boxY.setBounds(80, 250, 50, 20);
-        boxY.setBackground(colorGeneral);
-        boxY.setFont(fuenteGeneral);
         add(boxY);
 
         boxK = new JComboBox();
@@ -146,49 +124,39 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxK.addItem(e);
         }
         boxK.setBounds(80, 280, 50, 20);
-        boxK.setBackground(colorGeneral);
-        boxK.setFont(fuenteGeneral);
         add(boxK);
 
         buttonRGB = new JButton("RGB a CMYK");// --------------------------------------botones
         buttonRGB.setBounds(170, 70, 120, 20);
-        buttonRGB.setBackground(colorBotones);
-        buttonRGB.setFont(fuenteGeneral);
         buttonRGB.addActionListener(this);
         add(buttonRGB);
 
         panelRGB = new JPanel();/////////////////////////////////////////////////////////////////////////////
         panelRGB.setBounds(170, 90, 120, 5);
-        panelRGB.setBackground(colorGeneral);
         add(panelRGB);
 
         buttonCMYK = new JButton("CMYK a RGB");
         buttonCMYK.setBounds(170, 190, 120, 20);
-        buttonCMYK.setBackground(colorBotones);
-        buttonCMYK.setFont(fuenteGeneral);
         buttonCMYK.addActionListener(this);
         add(buttonCMYK);
 
         panelCMYK = new JPanel();/////////////////////////////////////////////////////////////////////////////
         panelCMYK.setBounds(170, 210, 120, 5);
-        panelCMYK.setBackground(colorGeneral);
         add(panelCMYK);
 
         buttonLimpiar = new JButton("Limpiar");
         buttonLimpiar.setBounds(170, 330, 120, 20);
-        buttonLimpiar.setBackground(colorBotones);
-        buttonLimpiar.setFont(fuenteGeneral);
         buttonLimpiar.addActionListener(this);
         add(buttonLimpiar);
 
         buttonDesarrollador = new JButton("Desarrollador");
         buttonDesarrollador.setBounds(10, 330, 120, 20);
-        buttonDesarrollador.setBackground(colorBotones);
-        buttonDesarrollador.setFont(fuenteGeneral);
         buttonDesarrollador.addActionListener(this);
         add(buttonDesarrollador);
     }// constructor
-
+    
+    //MÉTODOS         MÉTODOS         MÉTODOS         MÉTODOS         MÉTODOS
+    //para redondea
     public int redondear(float a) {
         int e = 0;
         e = Math.round(a * 100);
@@ -261,9 +229,6 @@ public class App extends JFrame implements ActionListener {// clase principal
         } // botón limpiar
 
         if (e.getSource() == buttonDesarrollador) {
-            UIManager UI = new UIManager();
-            UI.put("OptionPane.background", new ColorUIResource(255, 255, 255));
-            UI.put("Panel.background", new ColorUIResource(255, 255, 255));
             JOptionPane.showMessageDialog(null, "Lucero Emmanuel\n"
                     + "D.R., Diciembre de 2020\n"
                     + "VERSION 1.1", "Dessarrollador", 1);
