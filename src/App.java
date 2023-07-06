@@ -162,7 +162,21 @@ public class App extends JFrame implements ActionListener {// clase principal
         e = Math.round(a * 100);
         return e;
     }
+    
+    //para habilitar botones ++++++++++++++++++++++++++++++++++++++++
+    public void habilitarRGB(boolean condicion){
+        boxR.setEnabled(condicion);
+        boxG.setEnabled(condicion);
+        boxB.setEnabled(condicion);
+    }
+    public void habilitarCMYK(boolean condicion){
+        boxC.setEnabled(condicion);
+        boxM.setEnabled(condicion);
+        boxY.setEnabled(condicion);
+        boxK.setEnabled(condicion);
+    }
 
+    //ACCIONES PARA LOS BOTONES ++++++++++++++++++++++++++++++++++++++++    
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == buttonRGB) {
             // consigo los colores ingresados
@@ -185,13 +199,15 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxM.setSelectedIndex(redondear(m));
             boxY.setSelectedIndex(redondear(y));
             boxK.setSelectedIndex(redondear(k));
-
+            
+            //resultados después de precionar el botón
             buttonCMYK.setEnabled(false);
-            panelRGB.setBackground(new Color(rojo, verde, azul));
-
+            habilitarCMYK(false);// deshabilita los otros combos
+            panelRGB.setBackground(new Color (rojo, verde, azul));
         } // RGB
 
-        if (e.getSource() == buttonCMYK) {
+        if (e.getSource() == buttonCMYK) {            
+            //se consiguen los valores del color ingresado
             c = Float.parseFloat(boxC.getSelectedItem().toString()) / 100;
             m = Float.parseFloat(boxM.getSelectedItem().toString()) / 100;
             y = Float.parseFloat(boxY.getSelectedItem().toString()) / 100;
@@ -209,12 +225,15 @@ public class App extends JFrame implements ActionListener {// clase principal
             boxG.setSelectedIndex(verde);
             boxB.setSelectedIndex(azul);
 
+            //resultados después de precionar el botón
             buttonRGB.setEnabled(false);
-            panelCMYK.setBackground(new Color(rojo, verde, azul));
-
+            habilitarRGB(false);// deshabilita los otros combos
+            panelCMYK.setBackground(new Color (rojo, verde, azul)); 
         } // CMYK
 
         if (e.getSource() == buttonLimpiar) {
+            habilitarCMYK(true);
+            habilitarRGB(true);
             boxR.setSelectedIndex(0);
             boxG.setSelectedIndex(0);
             boxB.setSelectedIndex(0);
@@ -233,7 +252,6 @@ public class App extends JFrame implements ActionListener {// clase principal
                     + "D.R., Diciembre de 2020\n"
                     + "VERSION 1.1", "Dessarrollador", 1);
         }
-
     }// action event
 
     public static void main(String ars[]) {
