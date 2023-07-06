@@ -77,52 +77,31 @@ public class App extends JFrame implements ActionListener {// clase principal
         labelK.setBounds(10, 280, 100, 30);
         add(labelK);
 
-        boxR = new JComboBox();// -------------------------------------------combobox
-        for (int e = 0; e <= 255; e++) {
-            boxR.addItem(e);
-        }
+        boxR = rellenarCombo255();// -------------------------------------------combobox
         boxR.setBounds(80, 70, 50, 20);
         add(boxR);
 
-        boxG = new JComboBox();
-        for (int e = 0; e <= 255; e++) {
-            boxG.addItem(e);
-        }
+        boxG = rellenarCombo255();
         boxG.setBounds(80, 100, 50, 20);
         add(boxG);
 
-        boxB = new JComboBox();
-        for (int e = 0; e <= 255; e++) {
-            boxB.addItem(e);
-        }
+        boxB = rellenarCombo255();
         boxB.setBounds(80, 130, 50, 20);
         add(boxB);
 
-        boxC = new JComboBox();
-        for (int e = 0; e <= 100; e++) {
-            boxC.addItem(e);
-        }
+        boxC = rellenarCombo100();
         boxC.setBounds(80, 190, 50, 20);
         add(boxC);
 
-        boxM = new JComboBox();
-        for (int e = 0; e <= 100; e++) {
-            boxM.addItem(e);
-        }
+        boxM = rellenarCombo100();
         boxM.setBounds(80, 220, 50, 20);
         add(boxM);
 
-        boxY = new JComboBox();
-        for (int e = 0; e <= 100; e++) {
-            boxY.addItem(e);
-        }
+        boxY = rellenarCombo100();
         boxY.setBounds(80, 250, 50, 20);
         add(boxY);
 
-        boxK = new JComboBox();
-        for (int e = 0; e <= 100; e++) {
-            boxK.addItem(e);
-        }
+        boxK = rellenarCombo100();
         boxK.setBounds(80, 280, 50, 20);
         add(boxK);
 
@@ -174,6 +153,22 @@ public class App extends JFrame implements ActionListener {// clase principal
         boxM.setEnabled(condicion);
         boxY.setEnabled(condicion);
         boxK.setEnabled(condicion);
+    }
+
+    public JComboBox rellenarCombo255(){
+        JComboBox  miCombo = new JComboBox();
+        for(int e = 0; e <=255; e++){
+            miCombo.addItem(e);
+        }
+        return miCombo;
+    }
+
+    public JComboBox rellenarCombo100(){
+        JComboBox  miCombo = new JComboBox();
+        for(int e = 0; e <=100; e++){
+            miCombo.addItem(e);
+        }
+        return miCombo;
     }
 
     //ACCIONES PARA LOS BOTONES ++++++++++++++++++++++++++++++++++++++++    
