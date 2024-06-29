@@ -3,7 +3,7 @@
 
 **Para este ejercicio en Java:**
 
-* Se crea una interfaz gráfica (Swing)
+* Se crea una interfaz gráfica mediante la librería Swing
 * El programa realiza una conversión entre los modelos de colores RGB y CMYK
 * Se empaqueta el programa 
 
