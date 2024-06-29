@@ -1,18 +1,13 @@
-# EJERCICIO: PROGRAMA EN JAVA PARA INTERCAMBIAR ENTRE LOS MODELOS DE COLORES RGB Y CMYK
+#PROGRAMA EN JAVA CONVERTIR DE RGB A CMYK Y VICEVERSA 
 
 
 **Para este ejercicio en Java (Swing):**
 
-* Se crea una interfaz gráfica en Java 
-    * Strings
-    * Enteros y
-    * Objetos de una segunda clase (Jugadores)
+* Se crea una interfaz gráfica en Java para realizar una conversión entre los modelos de colores RGB y CMYK 
 
-*Finalmente se refactoriza el código para llenar y mostrar las instancias de la lista mediante métodos
-***
-**En el siguiente enlace se muestra la realización de este código:**
+**En el siguiente enlace se muestra la realización de este código en el block de notas:**
 
-[Ver vídeo en YouTube](https://www.youtube.com/watch?v=e_Cl57sIMBk&t=19s&ab_channel=luceroemmanueling "Tiempo real de la escritura del código")
+[Ver vídeo en YouTube](https://www.youtube.com/watch?v=ytEDLltIpC4&ab_channel=luceroemmanueling "Tiempo real de la escritura del código")
 
 
 
