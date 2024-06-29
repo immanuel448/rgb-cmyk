@@ -1,18 +1,18 @@
-## Getting Started
+# EJERCICIO: PROGRAMA EN JAVA PARA INTERCAMBIAR ENTRE LOS MODELOS DE COLORES RGB Y CMYK
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+**Para este ejercicio en Java (Swing):**
 
-The workspace contains two folders by default, where:
+* Se crea una interfaz gráfica en Java 
+    * Strings
+    * Enteros y
+    * Objetos de una segunda clase (Jugadores)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+*Finalmente se refactoriza el código para llenar y mostrar las instancias de la lista mediante métodos
+***
+**En el siguiente enlace se muestra la realización de este código:**
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+[Ver vídeo en YouTube](https://www.youtube.com/watch?v=e_Cl57sIMBk&t=19s&ab_channel=luceroemmanueling "Tiempo real de la escritura del código")
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
